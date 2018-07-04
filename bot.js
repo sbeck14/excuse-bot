@@ -45,7 +45,7 @@ require(__dirname + '/components/onboarding.js')(controller);
 
 const axios = require('axios');
 
-controller.hears(['[insert excuse here]'], 'ambient', function(bot, message) {
+controller.hears(['\\[insert excuse here\\]'], 'ambient', function(bot, message) {
   axios.get("http://www.ax11.de/bofh/index.php?plaintext")
   .then(response => {
       bot.reply(message, response.data);
@@ -54,7 +54,7 @@ controller.hears(['[insert excuse here]'], 'ambient', function(bot, message) {
   });
 });
 
-controller.hears(['[insert jargon here]'], 'ambient', function(bot, message) {
+controller.hears(['\\[insert jargon here\\]'], 'ambient', function(bot, message) {
     bot.reply(message, rbs());
   });
 
