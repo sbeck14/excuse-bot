@@ -59,7 +59,7 @@ controller.hears(['\\[insert jargon here\\]'], 'ambient', function(bot, message)
 
 function usage_tip() {
     console.log('~~~~~~~~~~');
-    console.log('Usage:);
+    console.log('Usage:');
     console.log('clientId=<MY SLACK CLIENT ID> clientSecret=<MY CLIENT SECRET> PORT=3000 node bot.js');
     console.log('~~~~~~~~~~');
 }
