@@ -12,7 +12,6 @@ var bot_options = {
 };
 
 // Use a mongo database if specified, otherwise store in a JSON file local to the app.
-// Mongo is automatically configured when deploying to Heroku
 if (process.env.DATABASE_URL) {
     var mongoStorage = require('botkit-storage-mongo')({mongoUri: process.env.DATABASE_URL});
     bot_options.storage = mongoStorage;
@@ -60,8 +59,8 @@ controller.hears(['\\[insert jargon here\\]'], 'ambient', function(bot, message)
 
 function usage_tip() {
     console.log('~~~~~~~~~~');
-    console.log('Execute your bot application like this:');
-    console.log('clientId=<MY SLACK CLIENT ID> clientSecret=<MY CLIENT SECRET> PORT=3000 studio_token=<MY BOTKIT STUDIO TOKEN> node bot.js');
+    console.log('Usage:);
+    console.log('clientId=<MY SLACK CLIENT ID> clientSecret=<MY CLIENT SECRET> PORT=3000 node bot.js');
     console.log('~~~~~~~~~~');
 }
 
